@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jenkins-pipeline
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/kumari-31/cicd-2.git
+    targetRevision: HEAD
+    path: pipeline  # adjust this if your actual manifests are elsewhere
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated: {}  # or your desired sync options
+  ignoreDifferences:
+  - group: projectcalico.org
+    kind: NetworkPolicy
+    jsonPointers:
+    - /spec
