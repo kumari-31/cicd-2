@@ -8,12 +8,12 @@ spec:
   source:
     repoURL: https://github.com/kumari-31/cicd-2.git
     targetRevision: HEAD
-    path: pipeline  # adjust this if your actual manifests are elsewhere
+    path: pipeline
   destination:
     server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
-    automated: {}  # or your desired sync options
+    automated: {}
   ignoreDifferences:
   - group: projectcalico.org
     kind: NetworkPolicy
