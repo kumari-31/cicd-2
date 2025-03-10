@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: jenkins-pipeline
+  name: jenkin-pipeline
   namespace: default
 spec:
   project: default
   source:
     repoURL: https://github.com/kumari-31/cicd-2.git
     targetRevision: HEAD
-    path: pipeline
+    path: files
   destination:
     server: https://kubernetes.default.svc
     namespace: default
