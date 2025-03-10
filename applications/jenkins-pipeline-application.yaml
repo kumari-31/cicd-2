@@ -14,8 +14,3 @@ spec:
     namespace: default
   syncPolicy:
     automated: {}
-  ignoreDifferences:
-  - group: projectcalico.org
-    kind: NetworkPolicy
-    jsonPointers:
-    - /spec
