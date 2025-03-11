@@ -4,7 +4,6 @@ metadata:
   name: todo-service
   labels:
     app: to-do-app
-    app.kubernetes.io/instance: jenkin-pipeline
 spec:
   type: NodePort
   selector:
