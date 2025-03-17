@@ -1,11 +1,11 @@
-apiVersion: apps/v3
+apiVersion: apps/v4
 kind: Deployment
 metadata:
   name: todo-app
   labels:
     app: to-do-app
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: to-do-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todo-app
-        image: kumari3333/cicd-3:39
+        image: kumari4444/cicd-4:49
         ports:
         - containerPort: 8000
