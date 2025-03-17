@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todo-app
-        image: kumari3123/cicd-1:40
+        image: kumari3123/cicd-1:41
         ports:
         - containerPort: 8000
